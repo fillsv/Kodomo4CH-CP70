@@ -1,0 +1,10 @@
+2LDFLAGS=-L${KAYA_VISION_POINT_LIB_PATH}
+CXXFLAGS =-std=c++11
+
+all: example_buffers
+
+example_buffers: KYFGLib_to_ssd.c
+	gcc -o KYFGLib_to_ssd KYFGLib_to_ssd.c -I$(KAYA_VISION_POINT_INCLUDE_PATH) -L${KAYA_VISION_POINT_LIB_PATH} -lKYFGLib -Wl,-rpath,${KAYA_VISION_POINT_LIB_PATH}
+
+
+

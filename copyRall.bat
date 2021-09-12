@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\PuTTY\pscp.exe" -i D:\Cp70\private.ppk -r -P 30311 d:\Cp70\develop\VisionPointApi fill@deimos.issp.ac.ru:/home/fill/develop/
