@@ -40,7 +40,9 @@ mkdir(patho)
 %patho = '/media/fill/cube/video/CubeExp/TestPump/';
 % return
 copyfile('info.mat', patho)
-name = 'pumpMix_noRot_2.dat';
+[tmp hostname] = system('hostname');
+hostname =  hostname(1:end-1);
+name = [hostname '_pumpMix_noRot_2.dat'];
 % name = 'rotDecay2_2hup_2hdown.dat';
 %name = 'test_no_rot_pump8_60deg.dat';
 sys_str = sprintf('sudo dd if=/dev/nvme0n1 of=%s bs=%dc count=%d status=progress', [patho name], width*height, frames*(nn+1))
