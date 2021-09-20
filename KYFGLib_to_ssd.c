@@ -383,8 +383,8 @@ int main(int argc, char* argv[])
 	KYFG_CameraStop(camHandleArray[grabberIndex][0]);
 	printf("\nStop! Done %lld frames in %1.3f s!\n", savedFrame, (double)(time_end.tv_sec-time_beg.tv_sec)+(double)(time_end.tv_nsec-time_beg.tv_nsec)/1e9);
 
-	printf("Write to SSD... \n");
-	write(f, memdata, (size_t)(height*width*savedFrame));
+//	printf("Write to SSD... \n");
+//	write(f, memdata, (size_t)(height*width*savedFrame));
 
 //    while(savedFrame<maxFrame);
 //	free(memdata);
